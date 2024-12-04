@@ -2,6 +2,10 @@
 __pycache__/
 *.py[cod]
 *$py.class
+GOOGLE_API_KEY.txt
+writer_suggestions.ipynb
+reviewer_feedback.ipynb
+.DS_Store
 
 # C extensions
 *.so

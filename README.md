@@ -22,7 +22,7 @@ In order to run the code you will need a [Gemini API key](https://ai.google.dev)
 ## Time to Run the Code!
 To get your reviews all you have to do now is run this command:
    ```
-   python Gemini_Resarch_Reviewer.py
+   python Gemini_Research_Reviewer.py.py
    ```
 
 ## Future Work

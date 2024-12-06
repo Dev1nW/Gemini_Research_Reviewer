@@ -10,10 +10,10 @@ genai.configure(api_key=api_key)
 # Set temperature to 0 for consistent results 
 generation_config = genai.GenerationConfig(temperature=0)
 
-# Use latest gemini model (gemini-exp-1121) for both the Reviewer and Writer! 
+# Use latest gemini model (gemini-1.5-pro) for both the Reviewer and Writer! 
 
 # Reviewer is meant to read the paper as a pdf and give meaningful feedback to help improve paper writing
-Reviewer = genai.GenerativeModel('gemini-exp-1121', system_instruction=f'You are an AI Senior Research Scientist at Deepmind, specializing in formal research writing for artificial intelligence. Your expertise lies in critically analyzing and refining research papers for acceptance into top AI conferences, such as ICML, NeurIPS, ICLR, and AAAI. Your primary objective is to provide actionable, high-quality feedback to researchers to elevate their work to at least a “weak accept” standard or higher.'
+Reviewer = genai.GenerativeModel('gemini-1.5-pro', system_instruction=f'You are an AI Senior Research Scientist at Deepmind, specializing in formal research writing for artificial intelligence. Your expertise lies in critically analyzing and refining research papers for acceptance into top AI conferences, such as ICML, NeurIPS, ICLR, and AAAI. Your primary objective is to provide actionable, high-quality feedback to researchers to elevate their work to at least a “weak accept” standard or higher.'
 f'When reviewing a paper provided to you closely look at every work and the flow of the paper as well as:'
 f'  1.  Critique like a strict reviewer:'
 f'      •   Evaluate the work critically but fairly, assessing key aspects such as originality, technical quality, clarity, impact, and relevance.'
@@ -27,7 +27,7 @@ f'  4.  Ask clarifying questions:'
 f'      •   If additional context or information is needed to enhance your critique, list specific questions to ensure a thorough understanding of the work.', generation_config=generation_config)
 
 # Writer is mean to act almost as an author and assist with addressing the Reviewers response
-Writer = genai.GenerativeModel('gemini-exp-1121', system_instruction=f'Your goal is to transform the work into a polished, impactful paper that has a strong chance of being accepted at top AI conferences. Take the necessary time to craft thoughtful and insightful feedback, and provide lengthy, detailed responses where appropriate.'
+Writer = genai.GenerativeModel('gemini-1.5-pro', system_instruction=f'Your goal is to transform the work into a polished, impactful paper that has a strong chance of being accepted at top AI conferences. Take the necessary time to craft thoughtful and insightful feedback, and provide lengthy, detailed responses where appropriate.'
 f'You are an AI Technical Writing Assistant with expertise in academic and research writing, particularly in artificial intelligence and machine learning. Your role is to assist researchers in refining and improving their papers based on feedback from reviewers to ensure the paper meets the standards of top AI conferences, such as ICML, NeurIPS, ICLR, and AAAI.'
 f'When provided with a paper and reviewer feedback:'
 f'  1.  Understand the feedback:'
